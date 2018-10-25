@@ -1,0 +1,44 @@
+{
+	"manifest_version": 2,
+	"name": "ytblocker",
+	"description": "Blocks ads and tracking on YouTube",
+	"icons": {
+		"24": "icons/icon_24.png",
+		"36": "icons/icon_36.png",
+		"48": "icons/icon_48.png",
+		"96": "icons/icon_96.png",
+		"128": "icons/icon_128.png",
+		"256": "icons/icon_256.png",
+		"512": "icons/icon_512.png"
+	},
+	"version": "1.0",
+	"permissions": [
+		"webRequest",
+		"webRequestBlocking",
+		"*://*.google.com/*",
+		"*://*.google.de/*",
+		"*://*.google.at/*",
+		"*://*.google.co.uk/*",
+		"*://*.google.us/*",
+		"*://*.youtube.com/*",
+		"*://*.ytimg.com/*",
+		"*://*.doubleclick.net/*",
+		"*://*.googlesyndication.com/*"
+	],
+	"background": {
+		"scripts": [
+			"blocker.js"
+		]
+	},
+	"browser_action": {
+		"default_icon": {
+			"24": "icons/icon_24.png",
+			"36": "icons/icon_36.png",
+			"48": "icons/icon_48.png",
+			"96": "icons/icon_96.png",
+			"128": "icons/icon_128.png",
+			"256": "icons/icon_256.png",
+			"512": "icons/icon_512.png"
+		}
+	}
+}
