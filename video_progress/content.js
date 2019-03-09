@@ -21,7 +21,7 @@ let backgroundPort
 
 
 const connectToBackground = () => {
-    console.info("Connecting to background...")
+    console.info("[YTBLOCKER] Connecting to background...")
 
     backgroundPort = browser.runtime.connect()
 
@@ -45,7 +45,7 @@ const handleMessage = message => {
 
 
 const disconnectFromBackground = () => {
-    console.info("Disconnecting from background...")
+    console.info("[YTBLOCKER] Disconnecting from background...")
 
     backgroundPort.disconnect()
 
@@ -67,7 +67,7 @@ const findPlayer = () => {
     player = document.querySelector("video")
 
     if (!player) {
-        console.error("Player not found")
+        console.error("[YTBLOCKER] Player not found")
     }
 }
 
@@ -76,7 +76,7 @@ const videoIsAboveThreshold = () => player.duration >= VIDEO_DURATION_THRESHOLD
 
 
 const saveCurrentProgress = () => {
-    console.log("Saving current progress...")
+    // console.log("[YTBLOCKER] Saving current progress...")
 
     backgroundPort.postMessage({
         action: "saveProgress",
@@ -88,7 +88,7 @@ const saveCurrentProgress = () => {
 
 
 const requestSavedProgress = () => {
-    console.log("Requesting saved progress...")
+    console.log("[YTBLOCKER] Requesting saved progress...")
     progressRequestIsPending = true
 
     backgroundPort.postMessage({
@@ -109,7 +109,7 @@ const handleLoadResponse = message => {
 
 
 const insertVideoProgress = progress => {
-    console.info("Inserting video progress...")
+    console.info("[YTBLOCKER] Inserting video progress...")
     player.currentTime = progress
 }
 
@@ -156,6 +156,6 @@ const setUpNewWatchPage = () =>
     }, 100)
 
 
-console.info("Initializing video progress saver on this tab...")
+console.info("[YTBLOCKER] Initializing video progress saver on this tab...")
 setNextTick()
 

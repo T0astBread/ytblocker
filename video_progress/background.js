@@ -14,7 +14,7 @@ const handleMessage = (message, port) => {
 
 
 const handleSaveMessage = ({ videoID, progress, duration }) => {
-    console.log(`Recieved save message for video ${videoID}`)
+    console.log(`[Progress Saver] Recieved save message for video ${videoID}`)
 
     const addObj = {}
 
@@ -29,7 +29,7 @@ const handleSaveMessage = ({ videoID, progress, duration }) => {
 
 
 const handleLoadMessage = ({ videoID }, port) => {
-    console.log(`Recieved load message for video ${videoID}`)
+    console.log(`[Progress Saver] Recieved load message for video ${videoID}`)
 
     browser.storage.local.get(videoID)
         .then(data => {
@@ -47,7 +47,7 @@ const handleDisconnect = port => {
     const portID = port.sender.tab.id
     contentScriptPorts[portID] = null
 
-    console.log(`Disconnected port #${portID}`)
+    console.log(`[Progress Saver] Disconnected port #${portID}`)
 }
 
 
@@ -58,7 +58,7 @@ const handleConnection = port => {
     port.onMessage.addListener(message => handleMessage(message, port))
     port.onDisconnect.addListener(handleDisconnect)
 
-    console.log(`Connected port #${portID}`)
+    console.log(`[Progress Saver] Connected port #${portID}`)
 }
 
 
