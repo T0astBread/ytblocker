@@ -11,7 +11,7 @@
 		"256": "icons/icon_256.png",
 		"512": "icons/icon_512.png"
 	},
-	"version": "0.1",
+	"version": "0.1.1",
 	"permissions": [
 		"webRequest",
 		"webRequestBlocking",
