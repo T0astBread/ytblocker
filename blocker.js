@@ -1,6 +1,6 @@
 console.info("Initializing...")
 
-const WHITELISTED_WORDS_REGEX = /load|add/g
+const WHITELISTED_WORDS_REGEX = /load|add|adapter/g
 const BANNED_WORDS_REGEX = /(?:ad)|(?:track)|(?:log)|(?:stats)/
 const WHITELISTED_URLS = ["youtube.com/results?search_query=", "youtube.com/watch"]
 
