@@ -1,7 +1,7 @@
 console.info("Initializing...")
 
 const WHITELISTED_WORDS_REGEX = /load|add|adapter/g
-const BANNED_WORDS_REGEX = /ad|track|log|stats|midroll/  // Don't put a "g" flag at the end - it won't work!
+const BANNED_WORDS_REGEX = /ad|track|log|stats|midroll|videogoodput/  // Don't put a "g" flag at the end - it won't work!  // Dunno if "videogoodput" is evil but it doesn't seem to be necessary
 const WHITELISTED_URLS = ["youtube.com/results?search_query=", "youtube.com/watch"]
 
 chrome.webRequest.onBeforeRequest.addListener(
