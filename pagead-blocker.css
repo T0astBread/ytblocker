@@ -1,3 +1,6 @@
-#masthead-ad {
+#masthead-ad,
+#consent-bump,
+iron-overlay-backdrop,
+ytd-action-companion-ad-renderer {
     display: none!important;
 }
