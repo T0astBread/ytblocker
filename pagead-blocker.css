@@ -1,6 +1,7 @@
 #masthead-ad,
 #consent-bump,
 iron-overlay-backdrop,
-ytd-action-companion-ad-renderer {
+ytd-action-companion-ad-renderer,
+ytd-promoted-sparkles-text-search-renderer {
     display: none!important;
 }
